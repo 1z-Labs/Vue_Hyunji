@@ -1,9 +1,6 @@
 <!--뷰 컴포넌트의 구조를 HTML 태그를 사용하여 구성-->
 <template>
-  <h1>Hello, Vue!</h1>
-  <div>
-    <FirstComponent/>
-  </div>
+  <router-view/>
 </template>
 
 <!--
@@ -11,15 +8,10 @@
   import를 사용하여 다른 모듈이나 라이브러리를 가져올 수 있음.
 -->
 <script>
-// 뷰 컴포넌트를 가져옴.
-import FirstComponent from '@/components/FirstComponent.vue'; // @는 절대경로 의미 / src 디렉토리를 가리킨다.
 
 // export default를 이용하여 뷰 컴포넌트 등록
 export default {
-  name: 'App',
-  components: {
-    FirstComponent
-  }
+  name: 'App'
 }
 </script>
 
