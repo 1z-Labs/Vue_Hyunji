@@ -1,5 +1,6 @@
 <!--뷰 컴포넌트의 구조를 HTML 태그를 사용하여 구성-->
 <template>
+  <HeaderComponent/>
   <router-view/>
 </template>
 
@@ -8,10 +9,14 @@
   import를 사용하여 다른 모듈이나 라이브러리를 가져올 수 있음.
 -->
 <script>
+import HeaderComponent from '@/components/HeaderComponent.vue'
 
 // export default를 이용하여 뷰 컴포넌트 등록
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    HeaderComponent
+  }
 }
 </script>
 
