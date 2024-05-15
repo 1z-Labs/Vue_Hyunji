@@ -1,28 +1,33 @@
-<!--뷰 컴포넌트의 구조를 HTML 태그를 사용하여 구성-->
 <template>
-  <HeaderComponent/>
-  <router-view/>
+  <div>
+    <!--HTML 속성도 데이터 바인딩 가능 -> :(콜론) 사용 (vue 문법)-->
+    <h4 class="red" :style="스타일">{{ products[0] }}</h4>
+    <p>{{ price1 }} 만원</p> <!--{{  }} -> 자동 렌더링-->
+  </div>
+  <div>
+    <h4>{{ products[1] }}</h4>
+    <p>{{ price2 }} 만원</p>
+  </div>
 </template>
 
-<!--
-  해당 스크립트가 위치하는 파일의 템플릿에 대해서만 스코프가 적용
-  import를 사용하여 다른 모듈이나 라이브러리를 가져올 수 있음.
--->
 <script>
-import HeaderComponent from '@/components/HeaderComponent.vue'
-
-// export default를 이용하여 뷰 컴포넌트 등록
 export default {
   name: 'App',
+  // 데이터 바인딩 : js 데이터를 html에 넣는 방법
+  // 데이터 보관함! - 자주 변경되는 데이터들은 데이터 바인딩을 이용할 것
+  data(){
+    return{
+      price1 : 60,
+      price2 : 70,
+      스타일 : 'color: blue',
+      products : ['역삼동 오피스텔', '마포구 오피스텔'],
+    }
+  },
   components: {
-    HeaderComponent
+   
   }
 }
 </script>
 
-<!--
-  스타일 속성에 관련한 css 코드 삽입
-  스타일 태그에 scoped 옵션을 부여하면 해당 템플릿에만 스타일 적용
--->
 <style>
 </style>
