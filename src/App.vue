@@ -1,7 +1,7 @@
 <template>
-  <!--v-html은 데이터 속 태그를 인식해 렌더링 -> Cross Site Scripting 공격에 매우 취약!-->
-  <!--사용자가 입력한 데이터 출력 (X) / 개발자가 직접 작성한 데이터를 출력할때만 사용하기!-->
-  <div v-html="message"></div>
+  <!--텍스트 보간과 비슷한 기능-->
+  <!--이 디렉티브는 속성에 사용해야 해서 요소의 콘텐츠가 모두 대체됨-->
+  <div v-text="message"></div>
 </template>
 
 <script>
