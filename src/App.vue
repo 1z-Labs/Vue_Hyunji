@@ -1,19 +1,21 @@
 <template>
-  <!--태그 영역을 건너뛰게 하는 디렉티브-->
-  <!--v-pre가 적용되어 div태그는 읽히지 못해 컴파일에서 제외됨-->
-  <!--'{{ message }}'가 문자열로 그대로 출력됨-->
-  <div v-pre>{{ message }}</div>
+  <!--v-bind : 태그의 콘텐츠가 아니라 속성에 데이터를 연결할 때 사용-->
+  <!--꼭 디렉티브와 class를 콜론으로 연결해주어야 함 / : 만 사용하여 축약 가능 (축약을 더 많이 쓴다)-->
+  <h1 :class="className">Hello, Vue.JS !</h1>
 </template>
 
 <script>
 export default {
   data() {
     return {
-      message: '<h1>Hello, Vue.JS !</h1>'
+      className: 'title',
     };
   }
 }
 </script>
 
 <style>
+.title {
+  color: red;
+}
 </style>
