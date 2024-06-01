@@ -19,7 +19,7 @@ export default {
     return{
       price1 : 60,
       price2 : 70,
-      스타일 : 'color: blue',
+      스타일 : 'color: red',
       products : ['역삼동 오피스텔', '마포구 오피스텔'],
     }
   },
