@@ -1,14 +1,15 @@
 <template>
-  <!--v-bind : 태그의 콘텐츠가 아니라 속성에 데이터를 연결할 때 사용-->
-  <!--꼭 디렉티브와 class를 콜론으로 연결해주어야 함 / : 만 사용하여 축약 가능 (축약을 더 많이 쓴다)-->
-  <h1 :class="className">Hello, Vue.JS !</h1>
+  <!--조건부 렌더링 : 디렉티브에 할당된 참/거짓 값에 따라 HTML요소를 렌더링할지 결정하는 것-->
+  <p v-if="visible">이 요소는 렌더링 중</p>
+  <p v-if="unvisible">이 요소는 렌더링 X</p>
 </template>
 
 <script>
 export default {
   data() {
     return {
-      className: 'title',
+      visible: true,
+      unvisible: false, // DOM 추가 후 감춰짐 X / DOM에 추가되지 않음 O
     };
   }
 }
